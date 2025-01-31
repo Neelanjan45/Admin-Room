@@ -1,0 +1,37 @@
+.top_banner {
+    margin: 5px 5px;
+    background-color: #888;
+    color: #FFF;
+    height: 75px;
+    margin-bottom: 50px;
+}
+
+.top_banner > div {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container {
+    margin: 20px 20%;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 10px;
+}
+
+.login_form {
+    padding: 10px;
+}
+
+.form_input{
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.login_btn > input {
+    padding: 5px 15px;
+    font-size: 18px;
+}
