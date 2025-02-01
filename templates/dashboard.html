@@ -3,7 +3,7 @@
 {% block content %}
     <div id="profile">
         <img src="User" alt="User">
-        <button>Log Out</button>
+        <button><a href="{{ url_for('logout') }}">Log Out</a></button>
     </div>
     <div class="dashboard-container">
         <div id="left-nav"></div>
