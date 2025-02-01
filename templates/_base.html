@@ -8,7 +8,13 @@
 </head>
 <body>
     <div class="top_banner">
-        <div>Admin Room</div>
+        <div id="top-left"><p>Admin Room</p></div>
+        {% if current_user.is_authenticated %}
+            <div id="top-right">
+                <img src="User" alt="User" id="top-right--img">
+                <a href="{{ url_for('logout') }}" id="top-right--btn">Log Out</a>
+            </div>
+        {% endif %}
     </div>
     {% block content %}
     {% endblock %}

@@ -1,7 +1,7 @@
 from app import app, login_manager
 from flask import render_template, redirect, url_for
 from forms import LoginForm
-from flask_login import login_required, login_user, logout_user
+from flask_login import login_required, login_user, logout_user, current_user
 from models import User
 from werkzeug.security import check_password_hash
 
