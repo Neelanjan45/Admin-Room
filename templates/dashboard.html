@@ -2,7 +2,45 @@
 
 {% block content %}
     <div class="dashboard-container">
-        <div id="left-nav"></div>
-        <div id="dashboard-body"></div>
+        <div id="left-nav">
+            <ul>
+                {% for bind in binds.keys() %}
+                    <li><a href="{{ url_for('dashboard') }}">{{ bind.upper() }}</a>
+                        <ul>
+                            <li><a href="{{ url_for('addLocation') }}">Add Location</a></li>
+                            <li><a href="{{ url_for('addAttraction') }}">Add Attraction</a></li>
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="dashboard-body">
+            <table id="travellan">
+                <thead>
+                    <tr>
+                        <th>Locations</th>
+                        <th>Attractions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for location in locations %}
+                        <tr>
+                            <td>{{ location.title }}</td>
+                            <td>
+                                <table id="travellan_attractions">
+                                    <tbody>
+                                        {% for site in location.sites.all() %}
+                                        <tr>
+                                                <td>{{ site.title }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 {% endblock %}

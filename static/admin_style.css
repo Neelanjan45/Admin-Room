@@ -60,16 +60,44 @@
 .dashboard-container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    height: 500px;
     width: 100%;
     column-gap: 10px;
     position: relative;
 }
 
 #left-nav {
-    background-color: aqua;
+    background-color: #888;
+    color: #fff;
+    font-size: 24px;
+}
+
+#left-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+    list-style: none;
+}
+
+#left-nav a {
+    text-decoration: none;
 }
 
 #dashboard-body {
-    background-color: aquamarine;
+    background-color: #F5F5F5;
+}
+
+#travellan {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#travellan_attractions {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
 }

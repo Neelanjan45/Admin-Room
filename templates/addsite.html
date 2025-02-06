@@ -1,0 +1,39 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div class="dashboard-container">
+        <div id="left-nav">
+            <ul>
+                {% for bind in binds.keys() %}
+                    <li><a href="{{ url_for('dashboard') }}">{{ bind.upper() }}</a>
+                        <ul>
+                            <li><a href="{{ url_for('addLocation') }}">Add Location</a></li>
+                            <li><a href="{{ url_for('addAttraction') }}">Add Attraction</a></li>
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="dashboard-body">
+            <p>Add Location</p>
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.title.label }}
+                    {{ form.title() }}
+                </p>
+                <p>
+                    {{ form.description.label }}
+                    {{ form.description() }}
+                </p>
+                <p>
+                    {{ form.location.label }}
+                    {{ form.location() }}
+                </p>
+                <p>
+                    {{ form.submit() }}
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}
